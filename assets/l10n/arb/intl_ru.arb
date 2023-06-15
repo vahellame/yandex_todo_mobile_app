@@ -1,4 +1,13 @@
 {
   "@@locale": "ru",
-  "todos_page_title": "Мои дела"
+  "todosPageTitle": "Мои дела",
+  "todosPageIsDoneLengthLabel": "Выполнено",
+  "todoPriorityNo": "Нет",
+  "todoPriorityLow": "Низкий",
+  "todoPriorityHigh": "Высокий",
+  "todosPageNewTodoLabel": "Новое",
+  "todoViewPageSaveButton": "СОХРАНИТЬ",
+  "todoViewPageDeleteButton": "Удалить",
+  "todoViewPageDeadlineLabel": "Сделать до",
+  "todoViewPagePriorityLabel": "Важность"
 }

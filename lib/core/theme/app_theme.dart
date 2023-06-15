@@ -5,7 +5,7 @@ import 'styles_palette.dart';
 import 'theme_style.dart';
 
 class AppTheme {
-  static ThemeData get getLightTheme => ThemeData(
+  static ThemeData get lightTheme => ThemeData.light(useMaterial3: false).copyWith(
         brightness: Brightness.light,
         scaffoldBackgroundColor: lightColorsPalette.backPrimary,
         extensions: [
@@ -16,12 +16,12 @@ class AppTheme {
         ],
       );
 
-  static ThemeData get getDarkTheme => ThemeData(
+  static ThemeData get darkTheme => ThemeData.dark(useMaterial3: false).copyWith(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: darkColorsPalette.backPrimary,
         extensions: [
           ThemeStyle(
-            colors: lightColorsPalette,
+            colors: darkColorsPalette,
             styles: stylesPalette,
           ),
         ],

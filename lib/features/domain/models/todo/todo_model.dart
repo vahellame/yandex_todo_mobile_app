@@ -10,10 +10,17 @@ class TodoModel with _$TodoModel {
   const factory TodoModel({
     required String text,
     required TodoPriority priority,
+    int? id,
     @Default(false) bool isDone,
     DateTime? deadline,
-    int? id,
   }) = _TodoModel;
+
+  factory TodoModel.empty() {
+    return const TodoModel(
+      text: '',
+      priority: TodoPriority.low,
+    );
+  }
 
   factory TodoModel.fromJson(Map<String, dynamic> json) => _$TodoModelFromJson(json);
 }

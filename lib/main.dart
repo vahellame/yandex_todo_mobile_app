@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
@@ -6,23 +9,38 @@ import 'package:provider/provider.dart';
 import 'core/dependency_injection/dependency_injection.dart';
 import 'core/l10n/generated/l10n.dart';
 import 'core/theme/app_theme.dart';
-import 'features/domain/controllers/todo/create_todo_controller.dart';
+import 'core/utils/logger.dart';
+import 'features/domain/controllers/todo/create_or_todo_controller.dart';
 import 'features/domain/controllers/todo/todos_controller.dart';
 import 'features/pages/todos/todos_page.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  runZonedGuarded(
+    () {
+      WidgetsFlutterBinding.ensureInitialized();
 
-  DependencyInjection.inject();
+      FlutterError.onError = (d) => Logger.e(d.exception, d.stack);
 
-  runApp(
-    MultiProvider(
-      providers: [
-        ListenableProvider(create: (_) => TodosController(GetIt.I.get())),
-        ListenableProvider(create: (_) => CreateTodoController(GetIt.I.get())),
-      ],
-      child: const TodoApp(),
-    ),
+      PlatformDispatcher.instance.onError = (error, stack) {
+        Logger.e(error, stack);
+        return true;
+      };
+
+      DependencyInjection.inject();
+
+      runApp(
+        MultiProvider(
+          providers: [
+            ListenableProvider(create: (_) => TodosController(GetIt.I.get())),
+            ListenableProvider(create: (_) => CreateOrUpdateTodoController(GetIt.I.get())),
+          ],
+          child: const TodoApp(),
+        ),
+      );
+    },
+    (e, s) {
+      Logger.e(e, s);
+    },
   );
 }
 
@@ -33,8 +51,8 @@ class TodoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const TodosPage(),
-      theme: AppTheme.getLightTheme,
-      darkTheme: AppTheme.getDarkTheme,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       localizationsDelegates: const [
         L10n.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -42,6 +60,7 @@ class TodoApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: L10n.delegate.supportedLocales,
+      locale: const Locale('ru'),
     );
   }
 }

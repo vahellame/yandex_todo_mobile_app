@@ -5,6 +5,6 @@ import '../../features/domain/controllers/controller.dart';
 
 mixin ControllerStateMixin<CurrentStatefulWidget extends StatefulWidget,
     CurrentController extends Controller> on State<CurrentStatefulWidget> {
-  CurrentController get contextRead => context.read<CurrentController>();
-  CurrentController get contextWatch => context.watch<CurrentController>();
+  CurrentController get cr => context.read<CurrentController>();
+  CurrentController get cw => context.watch<CurrentController>();
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../extensions/build_context_extension.dart';
+
 class SafeScaffold extends StatelessWidget {
   const SafeScaffold({
     this.body,
@@ -17,16 +19,14 @@ class SafeScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Scaffold(
-        floatingActionButton: floatingActionButton,
-        backgroundColor: backgroundColor,
-        body: SafeArea(
-          bottom: false,
-          child: Padding(
-            padding: padding,
-            child: body,
-          ),
+    return Scaffold(
+      backgroundColor: backgroundColor ?? context.colors.backPrimary,
+      floatingActionButton: floatingActionButton,
+      body: SafeArea(
+        bottom: false,
+        child: Padding(
+          padding: padding,
+          child: body,
         ),
       ),
     );
