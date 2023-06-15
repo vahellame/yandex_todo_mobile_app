@@ -11,7 +11,7 @@
 
 ## Настройка
 
-1. Клонируйте репозито2рий проекта на ваш компьютер с помощью следующей команды:
+1. Клонируйте репозиторий проекта на ваш компьютер с помощью следующей команды:
 
    ```shell
    git clone <repository_url>
@@ -49,10 +49,12 @@ flutter run
 
 Ниже представлены скриншоты приложения:
 
-![Скриншот 1](screenshots/1.png)
-![Скриншот 2](screenshots/2.png)
-![Скриншот 3](screenshots/3.png)
-![Скриншот 4](screenshots/4.png)
+<div style="display:flex;justify-content:center">
+    <img src="screenshots/1.png" alt="Скриншот 1" width="300" />
+    <img src="screenshots/2.png" alt="Скриншот 2" width="300" />
+    <img src="screenshots/3.png" alt="Скриншот 3" width="300" />
+    <img src="screenshots/4.png" alt="Скриншот 4" width="300" />
+</div>
 
 ## Создание APK-файла
 
