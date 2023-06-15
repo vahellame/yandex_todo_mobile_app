@@ -1,5 +1,3 @@
 import 'package:flutter/cupertino.dart';
 
-abstract class Controller with ChangeNotifier {
-
-}
+abstract class Controller with ChangeNotifier {}

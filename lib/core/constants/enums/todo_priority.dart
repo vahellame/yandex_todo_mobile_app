@@ -1,5 +1,1 @@
-enum TodoPriority {
-  no,
-  low,
-  high
-}
+enum TodoPriority { no, low, high }

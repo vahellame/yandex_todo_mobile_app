@@ -41,6 +41,7 @@ class TodoApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      supportedLocales: L10n.delegate.supportedLocales,
     );
   }
 }
