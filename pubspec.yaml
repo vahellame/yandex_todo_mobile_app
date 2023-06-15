@@ -13,21 +13,44 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
+
+  provider: ^6.0.5
+
+  get_it: ^7.6.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^2.0.1
   dart_code_metrics: ^5.7.5
+
   build_runner: ^2.4.5
   freezed: ^2.3.5
   json_serializable: ^6.7.0
+  intl_utils: ^2.8.3
+
+
+dependency_overrides:
+  intl: ^0.18.1
 
 flutter:
   uses-material-design: true
+
+flutter_intl:
+  enabled: true
+  class_name: L10n
+  main_locale: en
+  arb_dir: assets/l10n/arb
+  output_dir: lib/core/l10n/generated
 
 flutter_launcher_icons:
   android: true
