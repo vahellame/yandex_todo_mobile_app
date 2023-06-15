@@ -53,7 +53,6 @@ flutter run
     <img src="screenshots/1.png" alt="Скриншот 1" width="300" />
     <img src="screenshots/2.png" alt="Скриншот 2" width="300" />
     <img src="screenshots/3.png" alt="Скриншот 3" width="300" />
-    <img src="screenshots/4.png" alt="Скриншот 4" width="300" />
 </div>
 
 ## Создание APK-файла
