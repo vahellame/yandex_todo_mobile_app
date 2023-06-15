@@ -12,6 +12,7 @@ class TodoModel with _$TodoModel {
     required TodoPriority priority,
     @Default(false) bool isDone,
     DateTime? deadline,
+    int? id,
   }) = _TodoModel;
 
   factory TodoModel.fromJson(Map<String, dynamic> json) => _$TodoModelFromJson(json);

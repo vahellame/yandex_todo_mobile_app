@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 
-import '../../features/domain/controllers/task/tasks_state.dart';
+import '../../features/domain/controllers/todo/todos_state.dart';
 
 class DependencyInjection {
   DependencyInjection._();

@@ -1,6 +1,6 @@
 import '../../../../core/constants/enums/todo_priority.dart';
 import '../controller.dart';
-import 'tasks_state.dart';
+import 'todos_state.dart';
 
 class CreateTodoController extends Controller {
   CreateTodoController(this._todosState);

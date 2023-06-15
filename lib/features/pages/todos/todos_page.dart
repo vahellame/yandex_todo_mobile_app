@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../core/constants/enums/todo_priority.dart';
 import '../../../core/extensions/todo_priority_extension.dart';
+import '../../../core/utils/controller_state_mixin.dart';
+import '../../domain/controllers/todo/todos_controller.dart';
 
 class TodosPage extends StatefulWidget {
   const TodosPage({super.key});
@@ -10,12 +12,9 @@ class TodosPage extends StatefulWidget {
   State<TodosPage> createState() => _TodosPageState();
 }
 
-final todos = [
-  21,
-  42,
-];
+class _TodosPageState extends State<TodosPage>
+    with ControllerStateMixin<TodosPage, TodosController> {
 
-class _TodosPageState extends State<TodosPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +31,6 @@ class _TodosPageState extends State<TodosPage> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                if (index == todos.length) {
-                  return TextFormField();
-                }
                 return Container(
                   color: index.isOdd ? Colors.white : Colors.black12,
                   height: 100.0,
@@ -43,7 +39,6 @@ class _TodosPageState extends State<TodosPage> {
                   ),
                 );
               },
-              childCount: todos.length + 1,
             ),
           ),
         ],

@@ -1,4 +1,4 @@
-import '../../models/task_model/todo_model.dart';
+import '../../models/todo/todo_model.dart';
 
 class TodosState {
   List<TodoModel> todos = [];

@@ -6,8 +6,8 @@ import 'package:provider/provider.dart';
 import 'core/dependency_injection/dependency_injection.dart';
 import 'core/l10n/generated/l10n.dart';
 import 'core/theme/app_theme.dart';
-import 'features/domain/controllers/task/create_task_controller.dart';
-import 'features/domain/controllers/task/tasks_controller.dart';
+import 'features/domain/controllers/todo/create_todo_controller.dart';
+import 'features/domain/controllers/todo/todos_controller.dart';
 import 'features/pages/todos/todos_page.dart';
 
 void main() {
