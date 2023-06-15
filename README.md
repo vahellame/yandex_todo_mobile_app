@@ -14,13 +14,13 @@
 1. Клонируйте репозиторий проекта на ваш компьютер с помощью следующей команды:
 
    ```shell
-   git clone <repository_url>
+   git clone https://github.com/vahellame/yandex_todo_mobile_app
    ```
 
 2. Перейдите в директорию проекта:
 
    ```shell
-   cd <project_directory>
+   cd yandex_todo_mobile_app
    ```
 
 3. Установите зависимости проекта, выполнив следующую команду:
