@@ -38,7 +38,6 @@ dev_dependencies:
   json_serializable: ^6.7.0
   intl_utils: ^2.8.3
 
-
 dependency_overrides:
   intl: ^0.18.1
 
@@ -51,10 +50,3 @@ flutter_intl:
   main_locale: en
   arb_dir: assets/l10n/arb
   output_dir: lib/core/l10n/generated
-
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/icons/app_icon.jpg"
-  adaptive_icon_background: 'assets/icons/app_icon_background.png'
-  adaptive_icon_foreground: 'assets/icons/app_icon_foreground.png'

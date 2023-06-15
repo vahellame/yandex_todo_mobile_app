@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../../../core/extensions/build_context_extension.dart';
 import '../../../core/l10n/generated/l10n.dart';
 import '../../../core/ui_kit/scaffolds/safe_scaffold.dart';
 import '../../../core/utils/controller_state_mixin.dart';
-import '../../domain/controllers/todo/create_or_todo_controller.dart';
 import '../../domain/controllers/todo/todos_controller.dart';
 import '../todo_view/todo_view_page.dart';
 import 'widgets/todo_list_item.dart';
@@ -117,7 +115,8 @@ class _TodosPageState extends State<TodosPage>
                             alignment: Alignment.centerLeft,
                             child: Text(
                               L10n.current.todosPageNewTodoLabel,
-                              style: context.styles.body.copyWith(color: context.colors.labelTertiary),
+                              style:
+                                  context.styles.body.copyWith(color: context.colors.labelTertiary),
                             ),
                           ),
                         ),
