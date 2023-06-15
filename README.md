@@ -50,9 +50,9 @@ flutter run
 Ниже представлены скриншоты приложения:
 
 <div style="display:flex;justify-content:center">
-    <img src="screenshots/1.png" alt="Скриншот 1" width="250" />
-    <img src="screenshots/2.png" alt="Скриншот 2" width="250" />
-    <img src="screenshots/3.png" alt="Скриншот 3" width="250" />
+    <img src="screenshots/1.png" alt="Скриншот 1" width="290" />
+    <img src="screenshots/2.png" alt="Скриншот 2" width="290" />
+    <img src="screenshots/3.png" alt="Скриншот 3" width="290" />
 </div>
 
 ## Создание APK-файла
